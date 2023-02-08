@@ -428,11 +428,14 @@
     </button>
 
     <button class="card card-small" (mouseover)="showAlertBox()">Click me</button>
+    <button class="card card-small" (click)="addDog()">Add Dog</button>
 
   </div>
-  <p *ngFor= "let dog of doggies">{{ dog }}</p>
-  <p *ngIf="doggies.length <= 2 " >Who Let the Dog's Out!</p>
+<div>
+<app-dog [dogTitle]="dogTitle" [doggies]="doggies"></app-dog>
+  <p *ngIf="doggies.length <= 2">Who let the dogs out?</p>
 
+</div>
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
