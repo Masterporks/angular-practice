@@ -9,7 +9,10 @@ import {Dog} from "../shared/models/dog";
 export class DogComponent implements OnInit{
 @Input() dogTitle: string = "";
 @Input() doggies: Dog[] = [];
+  displayedColumns: string[] = ['name', 'type', 'property'];
+
 
   ngOnInit(): void {
+
   }
 }
